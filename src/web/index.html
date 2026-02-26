@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MNIST Online Classifier</title>
+  <link rel="stylesheet" href="/static/assets/styles.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- Left: Canvas -->
+    <section class="card">
+      <header class="title">
+        <span>Рисуй цифру</span>
+      </header>
+
+      <div class="canvasWrap">
+        <canvas id="c" width="280" height="280"></canvas>
+      </div>
+
+      <div class="controls">
+        <button id="clear">Очистить</button>
+        <button id="predict">Предикт</button>
+
+        <div class="range">
+          <span class="rangeLabel">Кисть</span>
+          <input id="brush" type="range" min="6" max="32" value="18" />
+          <span id="brushVal" class="rangeVal">18</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right: Prediction + Bars -->
+    <section class="card">
+      <header class="title">
+        <span>Модель думает</span>
+      </header>
+
+      <div class="predBig" id="pred">–</div>
+      <div class="predSmall" id="predInfo">Нарисуй что-нибудь</div>
+
+      <div class="bars" id="bars"></div>
+
+      <div class="status" id="status">
+        <span class="dot" id="dot"></span>
+        <span id="statusText">ожидание</span>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="/static/assets/js/main.js"></script>
+</body>
+</html>
