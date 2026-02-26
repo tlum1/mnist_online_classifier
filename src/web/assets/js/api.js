@@ -1,4 +1,4 @@
-const API_BASE = ""; // если web отдаётся FastAPI на том же порту
+const API_BASE = "";
 const PREDICT_URL = `${API_BASE}/predict`;
 
 export async function predictFromCanvas(canvas) {

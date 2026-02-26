@@ -3,15 +3,7 @@ import torch
 from PIL import Image, ImageChops, ImageFilter
 
 def preprocess_mnist_like(img: Image.Image, mean: float, std: float) -> torch.Tensor:
-    """
-    MNIST-like preprocessing:
-    - grayscale
-    - bbox crop
-    - resize longest side to 20px
-    - paste into 28x28
-    - center by center-of-mass (shift)
-    - normalize(mean/std)
-    """
+
     img = img.convert("L")
     img = img.filter(ImageFilter.GaussianBlur(radius=0.7))
 

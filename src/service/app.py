@@ -21,7 +21,6 @@ def create_app() -> FastAPI:
     def favicon():
         return {}
 
-    # CORS (можно убрать, если фронт всегда с этого же домена/порта)
     app.add_middleware(
         CORSMiddleware,
         allow_origins=["*"],
