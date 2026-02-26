@@ -1,9 +1,11 @@
 # MNIST Online Classifier
 
 Онлайн-классификатор рукописных цифр (MNIST)
+![Главная страница](gif.gif)
 
 
 ## Архитектура проекта
+```bash
 ├── requirements/
 │   ├── nn.txt           # зависимости для обучения
 │   └── service.txt      # зависимости для backend
@@ -26,7 +28,7 @@
 │   │
 │   └── models/
 │       └── mnist_mlp.pt # обученная модель (создается после обучения)
-
+```
 
 ## Обучение модели
 
@@ -39,6 +41,3 @@
 ## Запуск веб-интерфейса 
 1. ``pip install -r requirements/service.txt``
 2. ``uvicorn src.service.app:app --reload --port <YOUR_PORT>``
-
-## Пример работы
-![Главная страница](gif.gif)
